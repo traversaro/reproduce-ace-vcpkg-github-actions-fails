@@ -26,4 +26,5 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Install ace vcpkg port
       run: |
+        Remove-Item -Path "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.25.28610" -Force -Recurse
         vcpkg install ace:x64-windows
